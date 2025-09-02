@@ -12,37 +12,37 @@ import './Carousel.css'
 const slides = [
   {
     id: 1,
-    image: '/src/assets/simpkb.png',
+    image: 'https://dishub-bantul.netlify.app/assets/assets/simpkb.png',
     title: 'SIM PKB',
     link: 'https://example.com/simpkb'
   },
   {
     id: 2,
-    image: '/src/assets/andalalin.png',
+    image: 'https://dishub-bantul.netlify.app/assets/assets/andalalin.png',
     title: 'ANDALALIN',
     link: 'https://example.com/andalalin'
   },
   {
     id: 3,
-    image: '/src/assets/angkutan.png',
+    image: 'https://dishub-bantul.netlify.app/assets/assets/angkutan.png',
     title: 'ANGKUTAN',
     link: 'https://example.com/angkutan'
   },
   {
     id: 4,
-    image: '/src/assets/parkir.png',
+    image: 'https://dishub-bantul.netlify.app/assets/assets/parkir.png',
     title: 'PARKIR',
     link: 'https://example.com/parkir'
   },
   {
     id: 5,
-    image: '/src/assets/hotline.png',
+    image: 'https://dishub-bantul.netlify.app/assets/assets/hotline.png',
     title: 'HOTLINE',
     link: 'https://example.com/hotline'
   },
   {
     id: 6,
-    image: '/src/assets/saludtenan.png',
+    image: 'https://dishub-bantul.netlify.app/assets/assets/saludtenan.png',
     title: 'SALUD TENAN',
     link: 'https://example.com/saludtenan'
   }
