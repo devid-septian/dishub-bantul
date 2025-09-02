@@ -5,6 +5,12 @@ import 'swiper/css/pagination'
 import { Pagination, Autoplay } from 'swiper/modules'
 import React from 'react'
 import { Link } from "react-router-dom"
+const simpkb = new URL('../assets/simpkb.png', import.meta.url).href
+const andalalin = new URL('../assets/andalalin.png', import.meta.url).href
+const angkutan = new URL('../assets/angkutan.png', import.meta.url).href
+const parkir = new URL('../assets/parkir.png', import.meta.url).href
+const hotline = new URL('../assets/hotline.png', import.meta.url).href
+const saludtenan = new URL('../assets/saludtenan.png', import.meta.url).href
 
 // Custom styles for the dots
 import './Carousel.css'
@@ -12,37 +18,37 @@ import './Carousel.css'
 const slides = [
   {
     id: 1,
-    image: 'https://dishub-bantul.netlify.app/assets/assets/simpkb.png',
+    image: simpkb,
     title: 'SIM PKB',
     link: 'https://example.com/simpkb'
   },
   {
     id: 2,
-    image: 'https://dishub-bantul.netlify.app/assets/assets/andalalin.png',
+    image: andalalin,
     title: 'ANDALALIN',
     link: 'https://example.com/andalalin'
   },
   {
     id: 3,
-    image: 'https://dishub-bantul.netlify.app/assets/assets/angkutan.png',
+    image: angkutan,
     title: 'ANGKUTAN',
     link: 'https://example.com/angkutan'
   },
   {
     id: 4,
-    image: 'https://dishub-bantul.netlify.app/assets/assets/parkir.png',
+    image: parkir,
     title: 'PARKIR',
     link: 'https://example.com/parkir'
   },
   {
     id: 5,
-    image: 'https://dishub-bantul.netlify.app/assets/assets/hotline.png',
+    image: hotline,
     title: 'HOTLINE',
     link: 'https://example.com/hotline'
   },
   {
     id: 6,
-    image: 'https://dishub-bantul.netlify.app/assets/assets/saludtenan.png',
+    image: saludtenan,
     title: 'SALUD TENAN',
     link: 'https://example.com/saludtenan'
   }
