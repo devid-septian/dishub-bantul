@@ -4,48 +4,54 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import React from "react"
 import { IoLogoGooglePlaystore } from "react-icons/io5";
+const simpkb = new URL('../assets/simpkb.png', import.meta.url).href
+const andalalin = new URL('../assets/andalalin.png', import.meta.url).href
+const angkutan = new URL('../assets/angkutan.png', import.meta.url).href
+const parkir = new URL('../assets/parkir.png', import.meta.url).href
+const hotline = new URL('../assets/hotline.png', import.meta.url).href
+const saludtenan = new URL('../assets/saludtenan.png', import.meta.url).href
 
 const apps = [
   { 
     id: 1, 
     name: "SIM PKB", 
     desc: "Sistem Informasi Manajemen Pengembangan Keprofesian Berkelanjutan", 
-    image: '/src/assets/simpkb.png',
+    image: simpkb,
     playstore: "https://play.google.com/store/apps/details?id=com.dishub.simpkb" 
   },
   { 
     id: 2, 
     name: "ANDALALIN", 
     desc: "Aplikasi Analisis Dampak Lalu Lintas", 
-    image: "/src/assets/andalalin.png",
+    image: andalalin,
     playstore: "https://play.google.com/store/apps/details?id=com.dishub.andalalin" 
   },
   { 
     id: 3, 
     name: "ANGKUTAN", 
     desc: "Aplikasi layanan informasi transportasi darat, termasuk pengecekan laik jalan kendaraan dan informasi tracking bus", 
-    image: "/assets/angkutan.png",
+    image: angkutan,
     playstore: "https://play.google.com/store/apps/details?id=com.dishub.angkutan" 
   },
   { 
     id: 4, 
     name: "HOTLINE", 
     desc: "Aplikasi layanan aduan masyarakat untuk memberikan laporan", 
-    image: "/assets/hotline.png",
+    image: hotline,
     playstore: "https://play.google.com/store/apps/details?id=com.dishub.hotline" 
   },
   { 
     id: 5, 
     name: "PARKIR", 
     desc: "Aplikasi layanan parkir online", 
-    image: "/assets/parkir.png",
+    image: parkir,
     playstore: "https://play.google.com/store/apps/details?id=com.dishub.parkir" 
   },
   { 
     id: 6, 
     name: "SALUD TENAN", 
     desc: "Aplikasi edukasi rambu Lalu lintas", 
-    image: "/assets/saludtenan.png",
+    image: saludtenan,
     playstore: "https://play.google.com/store/apps/details?id=com.dishub.saludtenan" 
   },
 ]
