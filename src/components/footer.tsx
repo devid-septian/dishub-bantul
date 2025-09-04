@@ -2,6 +2,7 @@ import React from 'react'
 import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa"
 import { FiPhoneCall } from "react-icons/fi"
 import { HiOutlineMail } from "react-icons/hi"
+import { Link } from 'react-router-dom'
 
 const logoWhite = new URL('../assets/dishub-logo-white.png', import.meta.url).href
 const footerImg = new URL('../assets/footer-img.png', import.meta.url).href
@@ -65,8 +66,16 @@ function Footer() {
             </div>
             <div className="w-full">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-left mb-6 font-jost">Link</h2>
-              <p><a href="#" target="_blank" rel="noopener noreferrer">Kebijakan Privasi</a></p>
-              <p><a href="#" target="_blank" rel="noopener noreferrer">Syarat & Ketentuan</a></p>
+              <p>
+                <Link to="/privacy-policy" className="hover:text-yellow-400 transition">
+                  Kebijakan Privasi
+                </Link>
+              </p>
+              <p>
+                <Link to="/terms" className="hover:text-yellow-400 transition">
+                  Syarat & Ketentuan
+                </Link>
+              </p>
             </div>
             <div className="w-full">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-left mb-6 font-jost">Info Kontak</h2>

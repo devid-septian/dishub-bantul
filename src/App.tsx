@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import AppDetail from "./pages/AppDetail"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import Terms from "./pages/Terms"
 import React from "react"
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/app/:id" element={<AppDetail />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </Router>
   )
