@@ -11,6 +11,7 @@ import UserReport from '../components/UserReport'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa"
+import PostSlider from '../components/PostSlider'
 
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -77,7 +78,7 @@ function Home() {
       >
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
           <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
-            <div className="w-full md:w-[50%] flex flex-col justify-start items-start md:pe-8">
+            {/* <div className="w-full md:w-[50%] flex flex-col justify-start items-start md:pe-8">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-jost text-black text-center md:text-left">
                 DISHUB BANTUL
               </h2>
@@ -87,16 +88,17 @@ function Home() {
               <button className="mt-6 px-8 sm:px-12 py-3 sm:py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-jost text-lg sm:text-2xl flex items-center">
                 Lihat Selengkapnya
               </button>
-            </div>
+            </div> */}
 
             {/* Image hanya muncul di tablet ke atas */}
-            <img
+            {/* <img
               ref={imgRef}
               src={personaImagePath}
               alt="Persona"
               className="hidden md:block w-full md:w-[50%] object-cover transition-transform duration-150 ease-out"
-            />
-          </div>
+            /> */}
+              <PostSlider />
+            </div>
           </div>
       </section>
 

@@ -9,7 +9,7 @@ const andalalin = new URL('../assets/andalalin.png', import.meta.url).href
 const angkutan = new URL('../assets/angkutan.png', import.meta.url).href
 const parkir = new URL('../assets/parkir.png', import.meta.url).href
 const hotline = new URL('../assets/hotline.png', import.meta.url).href
-const saludtenan = new URL('../assets/saludtenan.png', import.meta.url).href
+const saludtenan = new URL('../assets/saludtenan-ellipse.png', import.meta.url).href
 
 const apps = [
   { 
