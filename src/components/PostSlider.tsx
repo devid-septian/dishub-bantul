@@ -3,7 +3,9 @@ import { Link } from "react-router-dom"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import React from "react"
 
-const bus = new URL('../assets/bus.png', import.meta.url).href
+const bus = new URL('../assets/bus_school.jpeg', import.meta.url).href
+const bus2 = new URL('../assets/pju.jpeg', import.meta.url).href
+const bus3 = new URL('../assets/bus.png', import.meta.url).href
 
 const posts = [
   {
@@ -16,13 +18,13 @@ const posts = [
     id: 2,
     title: "Pentingnya Rambu Lalu Lintas",
     desc: "Kenali arti penting rambu lalu lintas untuk keselamatan pengguna jalan.",
-    image: bus,
+    image: bus2,
   },
   {
     id: 3,
     title: "Transportasi Publik Modern",
     desc: "Masa depan transportasi publik yang ramah lingkungan dan efisien.",
-    image: bus,
+    image: bus3,
   },
 ]
 
