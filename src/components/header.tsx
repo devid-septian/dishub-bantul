@@ -3,6 +3,7 @@ import { FiMenu, FiX } from 'react-icons/fi'
 import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa"
 import { FiPhoneCall } from "react-icons/fi"
 import { HiOutlineMail } from "react-icons/hi"
+import { Link } from "react-router-dom"
 
 const logoPath = new URL('../assets/Dishub-Logo.png', import.meta.url).href
 
@@ -36,16 +37,7 @@ function Header() {
             </div>
             <div className='flex space-x-4 text-lg'>
                 <a
-                  href="https://twitter.com/dishub" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"
-                >
-                  <FaTwitter color='white' />
-                </a>
-  
-                <a
-                  href="https://facebook.com/dishub" 
+                  href="https://web.facebook.com/dishub.bantul?_rdc=1&_rdr#" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"
@@ -54,7 +46,7 @@ function Header() {
                 </a>
   
                 <a
-                  href="https://instagram.com/dishub" 
+                  href="https://www.instagram.com/dishub_bantul" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"
@@ -63,7 +55,7 @@ function Header() {
                 </a>
   
                 <a
-                  href="https://youtube.com/dishub" 
+                  href="https://www.youtube.com/DinasPerhubunganBantul" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"
@@ -79,16 +71,18 @@ function Header() {
       {/* ===== Main Navbar ===== */}
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4 sm:px-8 md:px-12 py-4">
         {/* Logo */}
-        <img src={logoPath} alt="logo" className="w-32" />
+        <Link to="/">
+          <img src={logoPath} alt="logo" className="w-32" />
+        </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden sm:flex space-x-6 font-jost">
-          <a href="#" className="hover:text-secondary">Dashboard</a>
-          <a href="#" className="hover:text-secondary">Laporan Masuk</a>
-          <a href="#" className="hover:text-secondary">Data Tugas</a>
-          <a href="#" className="hover:text-secondary">Statistik</a>
-          <a href="#" className="hover:text-secondary">Data Master</a>
-          <a href="#" className="hover:text-secondary">E-Surat</a>
+          <Link to="/" className="hover:text-primary">Dashboard</Link>
+          <Link to="#" className="hover:text-primary">Laporan Masuk</Link>
+          <Link to="#" className="hover:text-primary">Data Tugas</Link>
+          <Link to="#" className="hover:text-primary">Statistik</Link>
+          <Link to="#" className="hover:text-primary">Data Master</Link>
+          <Link to="#" className="hover:text-primary">E-Surat</Link>
         </nav>
 
         {/* Mobile Hamburger */}

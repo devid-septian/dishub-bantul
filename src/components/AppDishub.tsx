@@ -10,7 +10,7 @@ const andalalin = new URL('../assets/andalalin.png', import.meta.url).href
 const angkutan = new URL('../assets/angkutan.png', import.meta.url).href
 const parkir = new URL('../assets/parkir.png', import.meta.url).href
 const hotline = new URL('../assets/hotline.png', import.meta.url).href
-const saludtenan = new URL('../assets/saludtenan-ellipse.png', import.meta.url).href
+const saludtenan = new URL('../assets/logo-salud.png', import.meta.url).href
 
 // Custom styles for the dots
 import './Carousel.css'
@@ -95,7 +95,7 @@ export default function CarouselSection() {
                 className='flex flex-col items-center justify-center'
                 >
                 <div className="p-[15px] text-center bg-white rounded-full w-[150px] h-[150px] overflow-hidden flex justify-center items-center">
-                  <img src={slide.image} alt={slide.title} className="w-full max-w-[100%] mx-auto" />
+                  <img src={slide.image} alt={slide.title} className="w-full max-w-[100%] mx-auto rounded-full" />
                 </div>
               
                 <div className="p-4 sm:p-6 text-center">

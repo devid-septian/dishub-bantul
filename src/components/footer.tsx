@@ -21,31 +21,25 @@ function Footer() {
             </p>
             <div className='flex space-x-4 text-lg'>
               <a
-                href="https://twitter.com/dishub" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"
-              >
-                <FaTwitter color='white' />
-              </a>
-              <a
-                href="https://facebook.com/dishub" 
+                href="https://web.facebook.com/dishub.bantul?_rdc=1&_rdr#" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"
               >
                 <FaFacebookF color='white' />
               </a>
+
               <a
-                href="https://instagram.com/dishub" 
+                href="https://www.instagram.com/dishub_bantul" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"
               >
                 <FaInstagram color='white' />
               </a>
+
               <a
-                href="https://youtube.com/dishub" 
+                href="https://www.youtube.com/DinasPerhubunganBantul" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex rounded-full w-[40px] h-[40px] items-center justify-center bg-white/20 hover:bg-white/40 transition-colors"

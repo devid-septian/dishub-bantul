@@ -6,6 +6,7 @@ import Terms from "./pages/Terms"
 import BackToTop from "./components/BackToTop"
 import PostSlider from "./components/PostSlider"
 import PostDetail from "./pages/PostDetail"
+import BidangDetail from "./pages/BidangDetail"
 import React from "react"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/" element={<PostSlider />} />
         <Route path="/post/:id" element={<PostDetail />} />
+        <Route path="/bidang/:namaBidang" element={<BidangDetail />} />
       </Routes>
       <BackToTop />
     </Router>

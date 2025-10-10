@@ -3,13 +3,16 @@ import { useState } from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import React from "react"
-import { IoLogoGooglePlaystore } from "react-icons/io5";
-const simpkb = new URL('../assets/simpkb.png', import.meta.url).href
-const andalalin = new URL('../assets/andalalin.png', import.meta.url).href
-const angkutan = new URL('../assets/angkutan.png', import.meta.url).href
-const parkir = new URL('../assets/parkir.png', import.meta.url).href
-const hotline = new URL('../assets/hotline.png', import.meta.url).href
-const saludtenan = new URL('../assets/saludtenan-ellipse.png', import.meta.url).href
+import { IoLogoGooglePlaystore } from "react-icons/io5"
+import { FaGlobe } from "react-icons/fa"
+
+// Import gambar aplikasi
+const simpkb = new URL("../assets/simpkb.png", import.meta.url).href
+const andalalin = new URL("../assets/andalalin.png", import.meta.url).href
+const angkutan = new URL("../assets/angkutan.png", import.meta.url).href
+const parkir = new URL("../assets/parkir.png", import.meta.url).href
+const hotline = new URL("../assets/hotline.png", import.meta.url).href
+const saludtenan = new URL("../assets/logo-salud.png", import.meta.url).href
 
 const apps = [
   { 
@@ -24,7 +27,7 @@ const apps = [
     name: "ANDALALIN", 
     desc: "Aplikasi Analisis Dampak Lalu Lintas", 
     image: andalalin,
-    playstore: "https://play.google.com/store/apps/details?id=com.dishub.andalalin" 
+    playstore: "https://andalalin.dishub.go.id" // contoh: link web, bukan Playstore
   },
   { 
     id: 3, 
@@ -38,7 +41,7 @@ const apps = [
     name: "HOTLINE", 
     desc: "Aplikasi layanan aduan masyarakat untuk memberikan laporan", 
     image: hotline,
-    playstore: "https://play.google.com/store/apps/details?id=com.dishub.hotline" 
+    playstore: "https://hotline.dishub.go.id" 
   },
   { 
     id: 5, 
@@ -75,23 +78,25 @@ function AppDetail() {
 
   if (!app) return <p className="text-center py-20">Aplikasi tidak ditemukan.</p>
 
+  // Cek apakah link adalah Playstore atau link web
+  const isPlaystore = app.playstore.includes("play.google.com")
+
   return (
     <main className="bg-gray-50 text-gray-800">
-      {/* Header dari Home */}
       <Header />
 
       <section 
         id="tentang" 
-        className="bg-cover bg-hero-image relative h-auto md:h-[70vh] lg:h-[70vh] overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-center pt-[150px] xs:pt-[230px] sm:pt-[230px] md:pt-[230px] lg:pt-[330px] pb-[150px] lg:pb-[230px]" 
+        className="bg-cover bg-hero-image relative h-auto md:h-[70vh] overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-center pt-[150px] sm:pt-[230px] lg:pt-[330px] pb-[150px] lg:pb-[230px]" 
       >
         <div className="flex flex-col md:flex-row items-center w-full max-w-[900px] mx-auto gap-10">
-  
+          
           {/* Gambar Aplikasi */}
           <div className="w-[200px] h-[200px] md:w-[280px] md:h-[280px] flex-shrink-0">
             <img 
               src={app.image} 
               alt={app.name} 
-              className="w-full h-full object-contain rounded-2xl shadow-lg bg-white p-4"
+              className="w-full h-full object-contain rounded-full shadow-lg bg-white p-4"
             />
           </div>
 
@@ -103,28 +108,40 @@ function AppDetail() {
             <p className="text-lg md:text-xl text-gray-600 mb-6 text-center md:text-left w-full">
               {app.desc}
             </p>
+
+            {/* Tombol dinamis */}
             <a 
               href={app.playstore} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block md:w-fit bg-primary-dark hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition text-center"
+              className={`inline-block md:w-fit px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition text-center ${
+                isPlaystore
+                  ? "bg-green-600 hover:bg-green-700 text-white"
+                  : "bg-blue-600 hover:bg-blue-700 text-white"
+              }`}
             >
-              <IoLogoGooglePlaystore className="inline mr-2 w-[24px] h-[24px]" /> 
-              Download di Google Playstore
+              {isPlaystore ? (
+                <>
+                  <IoLogoGooglePlaystore className="inline mr-2 w-[24px] h-[24px]" /> 
+                  Download di Google Playstore
+                </>
+              ) : (
+                <>
+                  <FaGlobe className="inline mr-2 w-[22px] h-[22px]" /> 
+                  Kunjungi Situs Web
+                </>
+              )}
             </a>
           </div>
         </div>
 
-
-        {/* Overlay gelap biar teks lebih jelas */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 -z-10"></div>
       </section>
 
-      {/* Konten utama */}
+      {/* Form Feedback */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 py-16 max-w-5xl mx-auto">
         <div className="bg-white rounded-2xl shadow p-8">
-
-          {/* Form Feedback */}
           <h2 className="text-xl font-bold font-jost mb-4">Berikan Feedback</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input 
@@ -163,7 +180,6 @@ function AppDetail() {
         </div>
       </div>
 
-      {/* Footer dari Home */}
       <Footer />
     </main>
   )

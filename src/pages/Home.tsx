@@ -12,6 +12,8 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa"
 import PostSlider from '../components/PostSlider'
+import { Link } from "react-router-dom"
+
 
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -66,6 +68,16 @@ function Home() {
     }
   ]
 
+  // 🟩 Data Bidang
+  const bidangList = [
+    { nama: "Angkutan", aktivitas: 45, image: new URL('../assets/angkutan.jpeg', import.meta.url).href, },
+    { nama: "Perlengkapan Jalan", aktivitas: 38, image: new URL('../assets/perlengkapan-jalan.jpeg', import.meta.url).href, },
+    { nama: "Lalu Lintas", aktivitas: 56, image: new URL('../assets/lalulintas.jpeg', import.meta.url).href, },
+    { nama: "Sekretariat", aktivitas: 29, image: new URL('../assets/sekretariat.jpeg', import.meta.url).href, },
+    { nama: "UPT Pengujian Kendaraan", aktivitas: 42, image: new URL('../assets/upt.jpeg', import.meta.url).href, },
+  ]
+
+
   return (
     <main className="min-h-screen bg-gray-100 text-gray-800 scroll-smooth">
       <Header />
@@ -78,25 +90,6 @@ function Home() {
       >
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
           <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
-            {/* <div className="w-full md:w-[50%] flex flex-col justify-start items-start md:pe-8">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-jost text-black text-center md:text-left">
-                DISHUB BANTUL
-              </h2>
-              <p className="mt-4 font-jost text-base sm:text-lg md:text-[18px] text-gray-600 text-left">
-                Dinas Perhubungan Kabupaten Bantul adalah Organisasi Perangkat Daerah di Kabupaten Bantul yang melaksanakan tugas di bidang Perhubungan.
-              </p>
-              <button className="mt-6 px-8 sm:px-12 py-3 sm:py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-jost text-lg sm:text-2xl flex items-center">
-                Lihat Selengkapnya
-              </button>
-            </div> */}
-
-            {/* Image hanya muncul di tablet ke atas */}
-            {/* <img
-              ref={imgRef}
-              src={personaImagePath}
-              alt="Persona"
-              className="hidden md:block w-full md:w-[50%] object-cover transition-transform duration-150 ease-out"
-            /> */}
               <PostSlider />
             </div>
           </div>
@@ -159,6 +152,46 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* LIST BIDANG */}
+      <section id="bidang" className="py-16 w-full px-4 sm:px-6 md:px-8 lg:px-12 bg-gray-50">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 font-jost">
+          Bidang dan Aktivitas
+        </h2>
+
+        <div className="w-full max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {bidangList.map((item, index) => (
+              <Link
+                key={index}
+                to={`/bidang/${encodeURIComponent(item.nama.toLowerCase())}`}
+                className="relative rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group"
+              >
+                {/* Background Image */}
+                <img 
+                  src={item.image} 
+                  alt={item.nama} 
+                  className="w-full h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90"></div>
+
+                {/* Text Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 text-white">
+                  <h3 className="text-lg font-bold font-jost">
+                    {item.nama}
+                  </h3>
+                  <p className="text-sm font-medium font-jost text-white">
+                    {item.aktivitas} Aktivitas
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* CHART & USER REPORT */}
       <section className="bg-cover bg-hero-image text-white py-[100px] px-4 sm:px-6 md:px-8 lg:px-12">
