@@ -87,7 +87,7 @@ function AppDetail() {
 
       <section 
         id="tentang" 
-        className="bg-cover bg-hero-image relative h-auto md:h-[70vh] overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-center pt-[150px] sm:pt-[230px] lg:pt-[330px] pb-[150px] lg:pb-[230px]" 
+        className="bg-cover bg-[url('/img/banner-7.jpg')] relative h-auto md:h-[70vh] overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-center pt-[150px] sm:pt-[230px] lg:pt-[330px] pb-[150px] lg:pb-[230px]" 
       >
         <div className="flex flex-col md:flex-row items-center w-full max-w-[900px] mx-auto gap-10">
           

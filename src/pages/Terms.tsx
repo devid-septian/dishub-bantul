@@ -11,7 +11,7 @@ function Terms() {
 
       {/* Hero Section */}
       <section 
-        className="bg-cover bg-hero-image relative h-[40vh] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12"
+        className="bg-cover bg-[url('/img/banner-7.jpg')] relative h-[40vh] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12"
       >
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center z-10 font-jost mt-[150px] text-primary-dark">
           Syarat &amp; Ketentuan

@@ -148,7 +148,7 @@ function BidangDetail() {
       <Header />
 
       {/* HERO */}
-      <section className="bg-cover bg-hero-image text-black lg:pt-[250px] pt-[150px] lg:pb-[50px] pb-[50px] text-center">
+      <section className="bg-cover bg-[url('/img/banner-7.jpg')] text-black lg:pt-[250px] pt-[150px] lg:pb-[50px] pb-[50px] text-center">
         <h1 className="text-2xl sm:text-4xl font-bold font-jost capitalize">
           Bidang {namaBidang?.replace(/-/g, " ")}
         </h1>

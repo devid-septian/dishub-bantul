@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import React from "react"
+import { FaUser } from "react-icons/fa";
+import { FaCalendar } from "react-icons/fa";
 
 // Data dummy post (bisa diganti ambil dari API / context)
 const posts = [
@@ -60,6 +62,25 @@ function PostDetail() {
           className="w-full h-64 sm:h-80 md:h-[400px] object-cover rounded-xl shadow mb-8"
         />
         <p className="text-gray-700 text-lg leading-relaxed">{post.content}</p>
+        <div className="flex justify-between justify-items-center mt-8">
+          <div className="flex justify-items-center">
+            <div>
+              <FaUser className="text-gray-500 me-2 text-xs" />
+            </div>
+            <div>
+              <p className="text-gray-500 text-xs">Jhon Doe</p>
+            </div>
+          </div>
+          <div className="flex justify-items-center text-xs">
+            <div>
+              <FaCalendar className="text-gray-500 me-2  text-xs" />
+            </div>
+            <div>
+              <p className="text-gray-500  text-xs" >2025-10-14</p>
+            </div>
+          </div>
+        </div>
+        
       </article>
 
       {/* Footer */}

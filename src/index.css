@@ -1,6 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-html {
-  scroll-behavior: smooth;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0088FF;
+  --color-primary-dark: #0e2a47;
+  --color-primary-light: #7BC1FF;
+  --color-secondary: #FFC448;
+  --color-secondary-dark: #B45309;
+  --color-secondary-light: #FCD34D;
+
+  --font-jost: Jost, sans-serif;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

@@ -15,7 +15,7 @@ function Footer() {
         <div className="w-full flex flex-col md:flex-row gap-6">
           {/* Bagian kiri */}
           <div className="md:w-[40%] py-12 border-b md:border-b-0 md:border-r border-gray-100/20 md:pr-4">
-            <img src={logoWhite} alt="logo" className="w-90 mb-6" />
+            <img src={logoWhite} alt="logo" className="w-30 mb-6" />
             <p className="text-white mb-6">
               Follow akun media Sosial DISHUB BANTUL untuk mendapatkan informasi terbaru lainnya
             </p>

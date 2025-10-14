@@ -85,18 +85,18 @@ function Home() {
       {/* HERO */}
       <section 
         id="tentang" 
-        className="bg-cover bg-hero-image text-white text-center relative h-[100vh] overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12" 
+        className="bg-cover bg-[url('/img/banner-7.jpg')] text-white text-center relative h-[100vh] overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12" 
         onMouseMove={handleMouseMove} 
       >
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
           <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
               <PostSlider />
-            </div>
           </div>
+        </div>
       </section>
 
       {/* APP DISHUB */}
-      <section className="w-full py-12 bg-primary flex justify-center items-center bg-bg-pttrn bg-no-repeat bg-[#00194C] px-4 sm:px-6 md:px-8 lg:px-12">
+      <section className="w-full py-12 flex justify-center items-center bg-primary bg-[url('/img/bg-pttrn.png')] bg-no-repeat px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="w-full max-w-[1400px]">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-[40px] font-jost text-white">
             APP DISHUB
